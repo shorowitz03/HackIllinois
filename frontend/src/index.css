@@ -47,7 +47,12 @@ code {
   border-right: 5px solid #00000059;
 }
 
-.home{
+.home-descrip{
   background-color: #282c34;
   color:white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width:50%;
 }
