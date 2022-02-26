@@ -9,13 +9,21 @@ exports.make = (body) => {
   });
 };
 
-exports.match = (query, callback) => {
+exports.match = (body, callback) => {
   MongoClient.connect(process.env.CONNECTION_URI, async (err, client) => {
+    const data = [];
     const db = client.db("userDB");
-    await db.collection("users").find({
-      // DEPENDS ON HOW DATA IS SENT + STORED
-    });
+    const user = await db
+      .collection("users")
+      .findOne({ $and: [{ username: body.username }, { password: hash(body.password) }] }); // TODO: check over exact body property name
+    const { createHash } = require("crypto");
+
+    
     client.close();
     callback(data);
   });
 };
+
+function hash(string) {
+  return createHash("sha256").update(string).digest("hex");
+}

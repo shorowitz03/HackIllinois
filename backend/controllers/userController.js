@@ -6,6 +6,6 @@ exports.make = (req, res) => {
 };
 
 exports.match = (req, res) => {
-  console.log("match req.query" + req.query)
-  userModel.match(req.query)
+  console.log("match req.query" + req.body)
+  userModel.match(req.body)
 }

@@ -10,11 +10,21 @@ export class Register extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  async hash(string) {
+    const utf8 = new TextEncoder().encode(string);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", utf8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray
+      .map((bytes) => bytes.toString(16).padStart(2, "0"))
+      .join("");
+    return hashHex;
+  }
+
   async handleSubmit() {
     const databody = {
       username: this.state.nameIn,
       email: this.state.emailIn,
-      password: this.state.passwordIn,
+      password: await this.hash(this.state.passwordIn),
     };
     await fetch("/api/user/make", {
       method: "POST",
