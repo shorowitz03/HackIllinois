@@ -14,6 +14,7 @@ class NavBar extends React.Component {
       <div>
         <Link to="/" className="nav-links">Home</Link>
         <Link to="/matches" className="nav-links">Matches</Link>
+        <Link to="/login" className="nav-links">Login</Link>
         <Link to="/contactus" className="nav-links">Contact Us</Link>
       </div>
     </nav>

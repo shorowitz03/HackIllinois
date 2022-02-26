@@ -1,5 +1,5 @@
 import React from "react";
-import loginImg from "../../signup.svg";
+//import loginImg from "../../signup.svg";
 
 
 
