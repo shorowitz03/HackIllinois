@@ -23,14 +23,25 @@ code {
 .navbar h1 {
   color: #000000;
 }
-.navbar .links {
-  margin-left: auto;
-}
+
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
 }
-.navbar a:hover {
-  color: #199e5b;
+
+.nav-links{
+  color: black;
+  border-radius: 10px;
+  background-color: #f75104;
+}
+
+.nav-links{
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.nav-links:hover {
+  border-bottom: 5px solid #00000059;
+  border-right: 5px solid #00000059;
 }

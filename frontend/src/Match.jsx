@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class Match extends React.Component(){
+class Match extends React.Component{
     constructor(props){
         super(props)
     }
@@ -9,7 +9,7 @@ class Match extends React.Component(){
     render(){
         return(
             <div className = "main">
-                Home Page
+                This is a match
             </div>
         );
     }
