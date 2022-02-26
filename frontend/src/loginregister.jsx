@@ -63,5 +63,5 @@ const RightSide = props => {
       </div>
     );
   };
-  
+   
   export default loginregister
