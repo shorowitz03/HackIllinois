@@ -10,7 +10,11 @@ class home extends React.Component{
         return(
             <div className = "home">
                 Home Page
+                <p>Welcome to Music Matcher! Here you can connect with others based on mutual musical interests!
+                   To get started simply register, login, and begin matching.
+                </p>
             </div>
+            
         );
     }
 }
