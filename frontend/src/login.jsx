@@ -1,7 +1,9 @@
 import React from "react";
+import loginImg from "../../signup.svg";
 
 
-class signup extends React.Component{
+
+export class login extends React.Component{
     constructor(props){
         super(props)
     }
@@ -12,4 +14,4 @@ class signup extends React.Component{
         );
     }
 }
-export default signup;
+export default login;
