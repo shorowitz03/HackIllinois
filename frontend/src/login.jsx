@@ -6,7 +6,7 @@ export class Login extends React.Component{
     }
 
     render(){
-        return <div ckassName="base-container">
+        return <div className="base-container">
             <div className="header">Login</div>
             <div className="content">        
                 <div className="form">
