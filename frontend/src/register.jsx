@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-export class register extends React.Component{
+export class Register extends React.Component{
     constructor(props){
         super(props)
     }
@@ -12,9 +12,7 @@ export class register extends React.Component{
         return <div ckassName="base-container">
             <div className="header">Register</div>
             <div className="content">
-                <div className="image">
-                    <img src={loginImg} />                    
-                </div>
+                
                 <div className="form">
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
@@ -40,4 +38,4 @@ export class register extends React.Component{
         
     }
 }
-export default register;
+export default Register;
