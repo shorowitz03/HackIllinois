@@ -9,15 +9,16 @@ export class Register extends React.Component{
         this.state={nameIn:""};
         this.state={emailIn:""};
         this.state={passwordIn:""};
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(){
-        let databody = {
+    async handleSubmit(){
+        const databody = {
             "username": this.state.nameIn,
             "email": this.state.emailIn,
             "password": this.state.passwordIn,
         }
-    
+        console.log(databody)
         return fetch('/api/user/make', {
             method: 'POST',
             body: JSON.stringify(databody),
@@ -28,11 +29,12 @@ export class Register extends React.Component{
         })
         .then(res => res.json())
         .then(data => console.log(databody)); 
-        console.log(databody);
     }
     
     render(){
-        return <div className="base-container" ref={this.props.containerRef}>
+        return (
+        <form onSubmit={this.handleSubmit}>
+            <div className="base-container" ref={this.props.containerRef}>
             <div className="header">Register</div>
             <div className="content">
 
@@ -52,13 +54,13 @@ export class Register extends React.Component{
                 </div>
             </div>
             <div className="footer">
-                <button type="button" onClick={this.handleSubmit} href="/" className="btn">
+                <button type="submit" onSubmit={this.handleSubmit} href="/" className="btn">
                     Register
                 </button>
             </div>
         </div>
-
-
+        </form>
+        );
     }
 }
 export default Register;
