@@ -1,8 +1,10 @@
 require("dotenv").config();
+const request = require("request");
 const querystring = require("querystring");
+
 const client_id = "9ab89c27688d423294212d7896e14b72";
 const client_secret = "process.env.CLIENT_SECRET"; 
-const redirect_uri = "https://musicmatcher.live/";
+const redirect_uri = "http://localhost:3000/"; // TODO: CHANGE TO https://musicmatcher.live/ FOR PRODUCTION
 
 //https://github.com/spotify/web-api-auth-examples/blob/master/authorization_code/app.js
 
@@ -59,7 +61,8 @@ exports.callback = (req, res) => {
   } else {
     res.clearCookie(stateKey);
     var authOptions = {
-      url: "https://accounts.spotify.com/api/token",
+      url:
+        "https://accounts.spotify.com/api/token",
       form: {
         code: code,
         redirect_uri: redirect_uri,
@@ -98,6 +101,8 @@ exports.callback = (req, res) => {
             })
         );
       } else {
+        console.log(body)
+        console.log("STATUS CODE: " + response.statusCode);
         res.redirect(
           "/#" +
             querystring.stringify({
