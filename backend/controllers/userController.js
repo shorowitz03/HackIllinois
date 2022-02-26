@@ -1,7 +1,7 @@
 const userModel = require("../models/userModel");
 
 exports.make = (req, res) => {
-  console.log(body)
+  console.log("make body: " + body)
   userModel.make(req.body)
 };
 
