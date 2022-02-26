@@ -8,8 +8,7 @@ export class Login extends React.Component{
     render(){
         return <div ckassName="base-container">
             <div className="header">Login</div>
-            <div className="content">
-                
+            <div className="content">        
                 <div className="form">
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
