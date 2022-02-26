@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import ContactUs from "./contactus";
 import Matches from "./Match";
 import Login from "./login";
+import Home from "./home";
 
 function App() {
   return (
@@ -13,13 +14,18 @@ function App() {
       <NavBar />
       <header className="App-header">
         <Switch>
-          <Route exact path="/contactus">
-            <ContactUs />
-          </Route>
+          
+        <Route exact path="/">
+            <Home />
+        </Route>
 
-          <Route exact path="/matches">
-            <Matches />
-          </Route>
+        <Route exact path="/contactus">
+          <ContactUs />
+        </Route>
+
+        <Route exact path="/matches">
+          <Matches />
+        </Route>
 
           <Route exact path="/login">
             <Login />

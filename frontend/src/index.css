@@ -21,7 +21,8 @@ code {
   border-bottom: 2px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #000000;
+  color: white;
+  background-color: #282c34;
 }
 
 .navbar a {
@@ -44,4 +45,9 @@ code {
 .nav-links:hover {
   border-bottom: 5px solid #00000059;
   border-right: 5px solid #00000059;
+}
+
+.home{
+  background-color: #282c34;
+  color:white;
 }
