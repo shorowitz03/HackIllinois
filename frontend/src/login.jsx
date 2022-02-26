@@ -1,9 +1,6 @@
 import React from "react";
 
-
-
-
-export class login extends React.Component{
+export class Login extends React.Component{
     constructor(props){
         super(props)
     }
@@ -34,4 +31,4 @@ export class login extends React.Component{
         
     }
 }
-export default login;
+export default Login;
