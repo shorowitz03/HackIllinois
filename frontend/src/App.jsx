@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import ContactUs from "./contactus";
-import Connections from "./Connections";
+import Matches from "./Match";
 
 function App() {
 
@@ -17,8 +17,8 @@ function App() {
                 <ContactUs />
           </Route>
 
-          <Route exact path="/connections">
-                <Connnections />
+          <Route exact path="/matches">
+                <Matches />
           </Route>
 
         </Switch>

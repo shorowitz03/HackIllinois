@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class home extends React.Component(){
+class Match extends React.Component(){
     constructor(props){
         super(props)
     }
@@ -14,4 +14,4 @@ class home extends React.Component(){
         );
     }
 }
-export default home;
+export default Match;
