@@ -3,14 +3,14 @@ import React from "react";
 
 
 
-export class login extends React.Component{
+export class register extends React.Component{
     constructor(props){
         super(props)
     }
 
     render(){
         return <div ckassName="base-container">
-            <div className="header">Login</div>
+            <div className="header">Register</div>
             <div className="content">
                 <div className="image">
                     <img src={loginImg} />                    
@@ -22,7 +22,11 @@ export class login extends React.Component{
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input type="text" name="password" placeholder="password"/>
+                        <input type="email" name="password" placeholder="password"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name="email" placeholder="email"/>
                     </div>
                 </div>
             </div>       
@@ -36,4 +40,4 @@ export class login extends React.Component{
         
     }
 }
-export default login;
+export default register;
