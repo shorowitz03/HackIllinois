@@ -101,7 +101,7 @@ exports.callback = (req, res) => {
             })
         );
       } else {
-        console.log(body)
+        console.log(response)
         console.log("STATUS CODE: " + response.statusCode);
         res.redirect(
           "/#" +
