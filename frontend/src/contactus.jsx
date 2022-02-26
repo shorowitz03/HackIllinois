@@ -17,10 +17,10 @@ render () {
     return (
        /* <div>
            <Hero title = (this.props.title) />
-        </div>/*
+        </div> */
       
 
-
+    );
 
 }
 
