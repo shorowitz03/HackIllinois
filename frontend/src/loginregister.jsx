@@ -9,7 +9,7 @@ class loginregister extends React.Component {
       super(props);
       this.state = {
         isLogginActive: true,
-      }
+      };
     }
 
     changeState() {
@@ -38,7 +38,7 @@ class loginregister extends React.Component {
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
     return (
-      <div className="loginstuff">
+      <div className="App">
         <div className="login">
           <div className="container">
             {isLogginActive && (<Login containerRef={(ref) => (this.current = ref)} /> )}
