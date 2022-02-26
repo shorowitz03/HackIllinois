@@ -6,11 +6,10 @@ exports.make = (body) => {
     const db = client.db("userDB");
     await db.collection("users").insertOne(body);
     client.close();
-    callback(data);
   });
 };
 
-exports.match = (query) => {
+exports.match = (query, callback) => {
   MongoClient.connect(process.env.CONNECTION_URI, async (err, client) => {
     const db = client.db("userDB");
     await db.collection("users").find({

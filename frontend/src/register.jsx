@@ -10,20 +10,20 @@ export class Register extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit() {
+  async handleSubmit() {
     const databody = {
       username: this.state.nameIn,
       email: this.state.emailIn,
       password: this.state.passwordIn,
     };
-    fetch("/api/user/make", {
+    await fetch("/api/user/make", {
       method: "POST",
       body: JSON.stringify(databody),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-    });
+    })
   }
 
   render() {
@@ -67,11 +67,7 @@ export class Register extends React.Component {
             </div>
           </div>
           <div className="footer">
-            <button
-              type="submit"
-              href="/"
-              className="btn"
-            >
+            <button type="submit" href="/" className="btn">
               Register
             </button>
           </div>
