@@ -9,7 +9,7 @@ class Match extends React.Component{
     render(){
         return(
             <div className = "main">
-                Home Page
+                This is a match
             </div>
         );
     }
