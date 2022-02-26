@@ -4,23 +4,17 @@ import React from "react";
 class contactus extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            name: "",
-            email: "",
-            message: "",
-            disabled: false,
-            emailSent: null,
-        }
         
     }
 render () {
     return (
-        /*<div>
-           <Hero title = (this.props.title) />
-        </div> */
+        <div>
+            About us!
+            <p>Music Matcher was a project created by a team of 5 during the 2022 HackIllinois. Created using 
+                Vite, React, Cloudflare, Javascript, MongoDB. 
+            </p>
+        </div>
 
-        <div>wow this is where</div>
-    
     );
 
 }

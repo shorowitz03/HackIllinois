@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react';
+import logo from "./matchmakerlogo.gif";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -15,8 +16,9 @@ class NavBar extends React.Component {
         <Link to="/" className="nav-links">Home</Link>
         <Link to="/matches" className="nav-links">Matches</Link>
         <Link to="/login" className="nav-links">Login</Link>
-        <Link to="/contactus" className="nav-links">Contact Us</Link>
+        <Link to="/aboutus" className="nav-links">About Us</Link>
       </div>
+      <img src={logo} alt="logo" className="logo-img"/>
     </nav>
   );
 }

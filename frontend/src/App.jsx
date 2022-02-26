@@ -19,7 +19,7 @@ function App() {
             <Home />
         </Route>
 
-        <Route exact path="/contactus">
+        <Route exact path="/aboutus">
           <ContactUs />
         </Route>
 
