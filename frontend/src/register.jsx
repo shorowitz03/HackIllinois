@@ -7,6 +7,8 @@ export class Register extends React.Component {
     this.state = { nameIn: "" };
     this.state = { emailIn: "" };
     this.state = { passwordIn: "" };
+    this.state = { spotifyAcct: "" };
+    this.state = { topGnr: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -15,6 +17,8 @@ export class Register extends React.Component {
       username: this.state.nameIn,
       email: this.state.emailIn,
       password: this.state.passwordIn,
+      spotifyAcct: this.state.spotifyAcct,
+      topGnr: this.state.topGnr,
     };
     await fetch("/api/user/make", {
       method: "POST",
@@ -39,7 +43,7 @@ export class Register extends React.Component {
                   type="text"
                   name="username"
                   onChange={(event) => (this.state.nameIn = event.target.value)}
-                  placeholder="username"
+                  placeholder="Username"
                 />
               </div>
               <div className="form-group">
@@ -50,7 +54,25 @@ export class Register extends React.Component {
                   onChange={(event) =>
                     (this.state.emailIn = event.target.value)
                   }
-                  placeholder="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="spotifyAcct">Spotify Account</label>
+                <input
+                  type="text"
+                  name="spotifyAcct"
+                  onChange={(event) => (this.state.spotifyAcct = event.target.value)}
+                  placeholder="Spotify Account"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="topGnr">Top Genre</label>
+                <input
+                  type="text"
+                  name="topGnr"
+                  onChange={(event) => (this.state.topGnr = event.target.value)}
+                  placeholder="Top Genre"
                 />
               </div>
               <div className="form-group">
@@ -61,7 +83,7 @@ export class Register extends React.Component {
                   onChange={(event) =>
                     (this.state.passwordIn = event.target.value)
                   }
-                  placeholder="password"
+                  placeholder="Password"
                 />
               </div>
             </div>
