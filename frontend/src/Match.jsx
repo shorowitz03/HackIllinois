@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class Match extends React.Component(){
+class Match extends React.Component{
     constructor(props){
         super(props)
     }
