@@ -8,9 +8,9 @@ class home extends React.Component{
 
     render(){
         return(
-            <div className = "home">
+            <div>
                 Home Page
-                <p>Welcome to Music Matcher! Here you can connect with others based on mutual musical interests!
+                <p className = "home">Welcome to Music Matcher! Here you can connect with others based on mutual musical interests!
                    To get started simply register, login, and begin matching.
                 </p>
             </div>
