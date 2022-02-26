@@ -12,16 +12,9 @@ class NavBar extends React.Component {
     <nav className="navbar">
       <h1>Music Matcher</h1>
       <div>
-        <Link to="/" style={{
-          color: "white",
-          backgroundColor: "#199e5b",
-          borderRadius: "10px",
-        }}>Home</Link>
-        <Link to="/contactus" style={{
-          color: "white",
-          backgroundColor: "#199e5b",
-          borderRadius: "10px",
-        }}>Contact Us</Link>
+        <Link to="/" className="nav-links">Home</Link>
+        <Link to="/matches" className="nav-links">Matches</Link>
+        <Link to="/contactus" className="nav-links">Contact Us</Link>
       </div>
     </nav>
   );
