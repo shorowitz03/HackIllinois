@@ -15,12 +15,15 @@ class contactus extends React.Component {
     }
 render () {
     return (
-       /* <div>
+        /*<div>
            <Hero title = (this.props.title) />
         </div> */
-      
 
+        <div>wow this is where</div>
+    
     );
+
+}
 
 }
 
