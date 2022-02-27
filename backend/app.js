@@ -6,7 +6,7 @@ const authRouter = require("./routes/auth");
 const app = express();
 
 app.use(express.json());
-app.use(cors( /*origin: "http://localhost:3000", credentials: true */));
+app.use(cors( {origin: ["http://localhost:3000", "https://api.spotify.com/v1", "https://accounts.spotify.com/authorize", 'http://localhost:3000/api/auth/login'], credentials: true} ));
 app.use(cookieParser());
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);

@@ -7,11 +7,11 @@ class home extends React.Component {
   async componentDidMount() {
     let access_token;
     
-    await fetch("/api/auth/login", {mode: 'no-cors'})
-      .then((res) => console.log(res))// res.json())
-      // .then((data) => {
-      //   access_token = data.access_token;
-      // });
+    await fetch("/api/auth/login")
+      .then((res) => res.json())
+      .then((data) => {
+        access_token = data.access_token;
+      });
 
       console.log("this is inside the fetch")
       console.log(access_token)
@@ -19,7 +19,6 @@ class home extends React.Component {
       // !this prob isnt even user data
       method: 'GET',
       Authorization: `Bearer ${access_token}`,
-      mode: 'no-cors'
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
