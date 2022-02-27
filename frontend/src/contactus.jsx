@@ -10,7 +10,7 @@ render () {
     return (
         <div>
             About us!
-            <p>Music Matcher was a project created by a team of 5 during the 2022 HackIllinois. Created using 
+            <p>Music Matcher was a project created by a team of 6 during the 2022 HackIllinois. Created using 
                 Vite, React, Cloudflare, Javascript, MongoDB. 
             </p>
         </div>
