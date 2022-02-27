@@ -141,3 +141,26 @@ code {
   align-content: center;
   justify-content: center;
 }
+
+.spot-link:link{
+  color: #04aaf7;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+.spot-link:visited{
+  color:#04aaf7;
+  text-decoration:none;
+  padding-bottom: 20px;
+}
+.spot-descrip{
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 75%;
+  margin: 0px auto;
+}
