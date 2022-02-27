@@ -2,9 +2,9 @@ require("dotenv").config();
 const request = require("request");
 const querystring = require("querystring");
 
-const client_id = "9ab89c27688d423294212d7896e14b72";
-const client_secret = "process.env.CLIENT_SECRET"; 
-const redirect_uri = "http://localhost:3000/"; // TODO: CHANGE TO https://musicmatcher.live/ FOR PRODUCTION
+const client_id = "fd55fa1376d34e4bb68ecb6d2c7154d8";
+const client_secret = process.env.CLIENT_SECRET; 
+const redirect_uri = "http://localhost:5000/api/auth/callback"; // TODO: CHANGE TO https://musicmatcher.live/ FOR PRODUCTION
 
 //https://github.com/spotify/web-api-auth-examples/blob/master/authorization_code/app.js
 
@@ -89,20 +89,25 @@ exports.callback = (req, res) => {
 
         // use the access token to access the Spotify Web API
         request.get(options, function (error, response, body) {
-          console.log(body);
-        });
+          res.send({
+            access_token: access_token,
+            refresh_token: refresh_token,
+          })
 
-        // we can also pass the token to the browser to make requests from there
-        res.redirect(
-          "/#" +
-            querystring.stringify({
-              access_token: access_token,
-              refresh_token: refresh_token,
-            })
-        );
+        });
+        
+        // // we can also pass the token to the browser to make requests from there
+        // res.redirect(
+        //   "/#" +
+        //     querystring.stringify({
+        //       access_token: access_token,
+        //       refresh_token: refresh_token,
+        //     })
+        // );
       } else {
         console.log(response)
         console.log("STATUS CODE: " + response.statusCode);
+        console.log(client_secret);
         res.redirect(
           "/#" +
             querystring.stringify({
