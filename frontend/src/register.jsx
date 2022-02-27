@@ -26,13 +26,9 @@ export class Register extends React.Component {
     const databody = {
       username: this.state.nameIn,
       email: this.state.emailIn,
-<<<<<<< HEAD
       password: this.state.passwordIn,
       spotifyAcct: this.state.spotifyAcct,
       topGnr: this.state.topGnr,
-=======
-      password: await this.hash(this.state.passwordIn),
->>>>>>> 515a571a3350e05bc34e7fa13349fc826f1761aa
     };
     await fetch("/api/user/make", {
       method: "POST",
