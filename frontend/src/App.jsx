@@ -6,6 +6,7 @@ import ContactUs from "./contactus";
 import Matches from "./Match";
 import Login from "./loginregister";
 import Home from "./home";
+import SpotCon from './SpotCon';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
 
         <Route exact path="/matches">
           <Matches />
+        </Route>
+
+        <Route exact path="/connect">
+          <SpotCon />
         </Route>
 
           <Route exact path="/login">
