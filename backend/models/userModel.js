@@ -1,5 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 require("dotenv").config();
+const { createHash } = require("crypto");
 
 exports.make = (body) => {
   MongoClient.connect(process.env.CONNECTION_URI, async (err, client) => {
@@ -16,9 +17,7 @@ exports.match = (body, callback) => {
     const user = await db
       .collection("users")
       .findOne({ $and: [{ username: body.username }, { password: hash(body.password) }] }); // TODO: check over exact body property name
-    const { createHash } = require("crypto");
 
-    
     client.close();
     callback(data);
   });
