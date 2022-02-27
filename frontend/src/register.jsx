@@ -26,7 +26,7 @@ export class Register extends React.Component {
     const databody = {
       username: this.state.nameIn,
       email: this.state.emailIn,
-      password: this.state.passwordIn,
+      password: await this.hash(this.state.passwordIn),
       spotifyAcct: this.state.spotifyAcct,
       topGnr: this.state.topGnr,
     };
