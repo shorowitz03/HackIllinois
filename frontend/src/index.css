@@ -45,9 +45,11 @@ code {
 }
 
 .logo-img{
-  padding-left: 600px;
-  height: 100px;
-  width: auto;
+  display: flex;
+  max-width: 10%;
+  margin: 0 auto;
+  height: auto;
+  margin-right: 0;
 }
 
 .home{
