@@ -1,6 +1,6 @@
 # HackIllinois
 
-**To run the site in dev mode:** <br>
+<h2>To run the site in dev mode:</h2> 
 1. run `npm i` in the the following directories
     * `/Hackillinois`
     * `/Hackillinois/backend`
