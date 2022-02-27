@@ -4,17 +4,22 @@ class home extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
+  async componentDidMount() {
     let access_token;
-    fetch("/api/auth/login")
-      .then((res) => res.json())
-      .then((data) => {
-        access_token = data.access_token;
-      });
-    fetch("https://api.spotify.com/v1/tracks/2KrxsD86ARO5beq7Q0Drfqa", {
+    
+    await fetch("/api/auth/login", {mode: 'no-cors'})
+      .then((res) => console.log(res))// res.json())
+      // .then((data) => {
+      //   access_token = data.access_token;
+      // });
+
+      console.log("this is inside the fetch")
+      console.log(access_token)
+    await fetch("https://api.spotify.com/v1/tracks/2KrxsD86ARO5beq7Q0Drfqa", {
       // !this prob isnt even user data
-      method: GET,
+      method: 'GET',
       Authorization: `Bearer ${access_token}`,
+      mode: 'no-cors'
     })
       .then((res) => res.json())
       .then((data) => console.log(data));

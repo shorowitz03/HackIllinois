@@ -83,7 +83,7 @@ exports.callback = (req, res) => {
 
         var options = {
           url: "https://api.spotify.com/v1/me",
-          headers: { Authorization: "Bearer " + access_token },
+          headers: { Authorization: "Bearer " + access_token},
           json: true,
         };
 
@@ -96,14 +96,6 @@ exports.callback = (req, res) => {
 
         });
         
-        // // we can also pass the token to the browser to make requests from there
-        // res.redirect(
-        //   "/#" +
-        //     querystring.stringify({
-        //       access_token: access_token,
-        //       refresh_token: refresh_token,
-        //     })
-        // );
       } else {
         console.log(response)
         console.log("STATUS CODE: " + response.statusCode);
