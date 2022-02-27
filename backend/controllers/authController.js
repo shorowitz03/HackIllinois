@@ -30,7 +30,7 @@ exports.login = (req, res) => {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  const scope = "user-library-read";
+  const scope = "ugc-image-upload user-library-read";
   res.redirect(
     "https://accounts.spotify.com/authorize?" +
       querystring.stringify({
