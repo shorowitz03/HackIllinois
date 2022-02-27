@@ -7,7 +7,7 @@ Then run "npm install react-router-dom@5" in the general directory.
 Finally use "run npm dev" in the general directory to run both the backend
 and frontend. Click the provided link in the terminal to access website
 
-**To run the server:**
+**To run the server:** <br>
 run '''npm i''' in the the following directories
 * /Hackillinois
 * /Hackillinois/backend
